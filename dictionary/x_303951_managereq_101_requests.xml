@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="101_requests" max_length="40" name="x_303951_managereq_101_requests" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Assigment Group" max_length="32" name="assigment_group" reference="sys_user_group" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element label="Other Description" max_length="40" name="other_description" type="string"/>
+        <element label="short description" max_length="40" name="short_description" type="string"/>
+        <element choice="1" default="new" label="State" max_length="40" name="state" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Waiting Approval" sequence="1" value="waitingapproval"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="inprogress"/>
+                <element inactive_on_update="false" label="Cancel" sequence="3" value="cancel"/>
+                <element inactive_on_update="false" label="Closed" sequence="4" value="closed"/>
+            </choice>
+        </element>
+        <element label="When need" mandatory="true" max_length="40" name="when_need" type="glide_date_time"/>
+        <element choice="1" label="Which Departman" max_length="40" name="which_departman" type="string">
+            <choice>
+                <element inactive_on_update="false" label="IT" sequence="0" value="it"/>
+                <element inactive_on_update="false" label="HR" sequence="1" value="hr"/>
+                <element inactive_on_update="false" label="Facilites" sequence="2" value="facilites"/>
+                <element inactive_on_update="false" label="Other" sequence="3" value="other"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Who need" max_length="32" name="who_need" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="assigment_group"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+        <index name="index3">
+            <element name="who_need"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow_snapshot">
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>101_example_flow</internal_name>
+        <label_cache>[{"name":"Created_1.current.who_need.manager","label":"Trigger➛101_requests Record➛Who need➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created_1.current.who_need","label":"Trigger➛101_requests Record➛Who need","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_303951_managereq_101_requests","column_name":"who_need"},{"name":"e4c54be4-04cf-4cc1-afa7-26a09d81299a.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice"},{"name":"7739c317-6871-42db-b3dd-020f76b2259f.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice"},{"name":"Created_1.current","label":"Trigger➛101_requests Record","reference":"x_303951_managereq_101_requests","reference_display":"101_requests","type":"reference","base_type":"reference"},{"name":"c3c36f34-f066-4343-a2ef-541495123016.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice"}]</label_cache>
+        <master>true</master>
+        <name>101 Example Flow</name>
+        <outputs/>
+        <parent_flow display_value="101 Example Flow">52303b8fdbd23300a0e5dde748961999</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-02 12:39:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a394fb83db163300a0e5dde7489619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>101 Example Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="manageRequest" source="x_303951_managereq">d12569f6dbda3300a0e5dde74896193a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="manageRequest">d12569f6dbda3300a0e5dde74896193a</sys_scope>
+        <sys_update_name>sys_hub_flow_snapshot_a394fb83db163300a0e5dde7489619fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-02 12:39:06</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a394fb83db163300a0e5dde7489619fc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a394fb83db163300a0e5dde7489619fc"/>
+</record_update>

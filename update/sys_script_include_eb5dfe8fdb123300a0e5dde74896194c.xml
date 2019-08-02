@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_303951_managereq.HelloWorld</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>HelloWorld</name>
+        <script><![CDATA[var HelloWorld = Class.create();
+HelloWorld.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	 helloWorld:function() { return "Hello " + this.getParameter('sysparm_user_name') + "!"; } ,
+	
+	 getRecordCount : function (){
+		 var gr = new GlideRecord('x_303951_managereq_101_requests');
+		 gr.query();
+		 return  gr.getRowCount();
+	 },
+	
+	/*
+	 * method available to client scripts call using:
+	 * var gajax = new GlideAjax("MyFavoritesAjax");
+	 * gajax.addParam("sysparm_name","getFavorites");
+	 */
+	getFavorites: function() { // build new response xml element for result
+     var result = this.newItem("result");
+	  result.setAttribute("message","returning all favorites");
+ 
+	  //add some favorite nodes with name and value attributes 
+         this._addFavorite("color","blue");
+         this._addFavorite("beer","lager");
+         this._addFavorite("pet","dog");
+       },
+	 // all items are returned to the client through the inherited methods of AbstractAjaxProcessor
+	 _addFavorite: function(name, value) { 
+       var favs = this.newItem("favorite");
+	   favs.setAttribute("name",name);
+	   favs.setAttribute("value",value); },
+	
+    type: 'HelloWorld'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-02 08:45:10</sys_created_on>
+        <sys_id>eb5dfe8fdb123300a0e5dde74896194c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>HelloWorld</sys_name>
+        <sys_package display_value="manageRequest" source="x_303951_managereq">d12569f6dbda3300a0e5dde74896193a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="manageRequest">d12569f6dbda3300a0e5dde74896193a</sys_scope>
+        <sys_update_name>sys_script_include_eb5dfe8fdb123300a0e5dde74896194c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-02 09:08:27</sys_updated_on>
+    </sys_script_include>
+</record_update>
